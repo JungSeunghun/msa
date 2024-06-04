@@ -1,20 +1,18 @@
-package com.pageday.userserver
+package com.pageday.readinghistoryserver
 
+import com.pageday.readinghistoryserver.common.webconfig.CorsProperties
 import com.pageday.userserver.common.jwt.config.JwtProperties
-import com.pageday.userserver.common.webconfig.CorsProperties
-import com.pageday.userserver.config.SnowflakeConfig
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
 @EnableConfigurationProperties(
-	JwtProperties::class,
-	SnowflakeConfig::class,
-	CorsProperties::class,
+    JwtProperties::class,
+    CorsProperties::class,
 )
-class UserServerApplication
+class ReadingHistoryServerApplication
 
 fun main(args: Array<String>) {
-	runApplication<UserServerApplication>(*args)
+    runApplication<ReadingHistoryServerApplication>(*args)
 }
